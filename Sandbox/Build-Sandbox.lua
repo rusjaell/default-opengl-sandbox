@@ -12,7 +12,7 @@ project "Sandbox"
       "src",
 	  "../Vendor/GLFW/include",
 	  "../Vendor/GLAD/include",
-	  "../Vendor/GLM/include"
+      "../Vendor/GLM/include"
    }
 
    links
