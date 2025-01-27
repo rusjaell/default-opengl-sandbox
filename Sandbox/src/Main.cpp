@@ -26,7 +26,7 @@ int main()
 {
     glfwSetErrorCallback([](int error, const char* description)
     {
-        fprintf(stderr, "GLFW Error: %s\n", description);
+         fprintf(stderr, "[GLFW Error] %s\n", description);
     });
 
     if (!glfwInit()) {
@@ -55,7 +55,7 @@ int main()
     GL_CALL(glEnable(GL_DEBUG_OUTPUT));
     GL_CALL(glDebugMessageCallback([](GLenum source, GLenum type, GLuint id, GLenum severity, GLsizei length, const GLchar* message, const void* userParam)
     {
-        fprintf(stderr, "[OpenGL Debug] %s\n", message);
+        fprintf(stderr, "[OpenGL Debug] Source: %u, Type: %u, ID: %u, Severity: %u, Message: %s\n", source, type, id, severity, message);
     }, nullptr));
 
     // CornFlower Blue  0x6495ed | 100, 149, 237
